@@ -1,6 +1,6 @@
 <?php
 
-namespace Mehedi\Mimes;
+namespace Mehedi\AmpMail\Mimes;
 
 use Illuminate\Support\Facades\View;
 
@@ -25,21 +25,20 @@ trait Amp
         $this->ampView = $view;
         $this->viewData = array_merge($this->viewData, $data);
 
-        return $this;
+        return $this->addAmpPart();
     }
 
     /**
-     * Run the callbacks for the message.
+     * Register a callback for add amp part on message
      *
-     * @param  \Illuminate\Mail\Message  $message
      * @return $this
      */
-    protected function runCallbacks($message)
+    protected function addAmpPart()
     {
-        parent::runCallbacks($message);
-
-        $message->getSwiftMessage()
-            ->addPart($this->renderAmpView(), 'text/x-amp-html', 'utf-8');
+        $this->withSwiftMessage(function ($message) {
+            /** @var $message \Swift_Message */
+            $message->addPart($this->renderAmpView(), 'text/x-amp-html', 'utf-8');
+        });
 
         return $this;
     }
