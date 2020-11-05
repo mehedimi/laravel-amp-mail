@@ -1,3 +1,5 @@
+<img src="https://banners.beyondco.de/Laravel%20AMP%20Mail.png?theme=light&packageName=mehedimi%2Flaravel-amp-mail&pattern=architect&style=style_1&description=&md=1&showWatermark=0&fontSize=100px&images=mail"/>
+
 # Laravel AMP Mail
 Added support for amp mail
 
