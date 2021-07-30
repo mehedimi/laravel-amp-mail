@@ -1,11 +1,11 @@
-<img src="https://banners.beyondco.de/Laravel%20AMP%20Mail.png?theme=light&packageName=mehedimi%2Flaravel-amp-mail&pattern=architect&style=style_1&description=&md=1&showWatermark=0&fontSize=100px&images=mail"/>
+<img src="https://banners.beyondco.de/Laravel%20AMP%20Mail.png?theme=light&packageManager=composer+require&packageName=mehedimi%2Flaravel-amp-mail&pattern=architect&style=style_2&description=Send+AMP+mail+through+your+Laravel+app&md=1&showWatermark=0&fontSize=100px&images=mail&widths=400&heights=400"/>
 
 # Laravel AMP Mail
-Added support for amp mail
+Send amp mail through your Laravel app
 
 ## Installation
 ```bash
-$ composer require mehedimi/laravel-amp-mail
+composer require mehedimi/laravel-amp-mail
 ```
 
 ## Quick Usages
