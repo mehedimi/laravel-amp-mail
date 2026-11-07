@@ -5,6 +5,12 @@ on:
     branches: [master]
   pull_request:
 
+env:
+  # Laravel 11 is past its security-fix window, so every stable 11.x release
+  # carries open advisories. Composer 2.10+ blocks those versions by default,
+  # which would stop the Laravel 11 matrix jobs from resolving.
+  COMPOSER_POLICY_ADVISORIES_BLOCK: 'false'
+
 jobs:
   test:
     runs-on: ubuntu-latest
