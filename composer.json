@@ -1,8 +1,12 @@
 {
     "name": "mehedimi/laravel-amp-mail",
-    "version": "2.0.0",
     "description": "Send amp mail through laravel mail",
     "license": ["MIT"],
+    "keywords": ["laravel", "amp", "amp-email", "amp-mail", "mail", "mailable"],
+    "support": {
+        "issues": "https://github.com/mehedimi/laravel-amp-mail/issues",
+        "source": "https://github.com/mehedimi/laravel-amp-mail"
+    },
     "authors": [
         {
             "name": "Mehedi Hasan",
@@ -10,11 +14,27 @@
         }
     ],
     "require": {
-        "laravel/framework": ">=5.5"
+        "php": "^8.3",
+        "laravel/framework": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5|^11.5",
+        "orchestra/testbench": "^9.0|^10.0|^11.0"
     },
     "autoload": {
         "psr-4": {
             "Mehedi\\AmpMail\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mehedi\\AmpMail\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    },
+    "config": {
+        "sort-packages": true
     }
 }
